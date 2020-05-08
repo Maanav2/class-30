@@ -21,12 +21,12 @@ function setup(){
     ground = new Ground(600,height,1200,20);
     platform = new Ground(150, 305, 300, 170);
 
-    box1 = new Box(700,320,70,70);
+    box1 = new Box(740,320,70,70);
     box2 = new Box(920,320,70,70);
     pig1 = new Pig(810, 350);
     log1 = new Log(810,260,300, PI/2);
 
-    box3 = new Box(700,240,70,70);
+    box3 = new Box(740,240,70,70);
     box4 = new Box(920,240,70,70);
     pig3 = new Pig(810, 220);
 
@@ -74,4 +74,11 @@ function mouseDragged(){
 
 function mouseReleased(){
     slingshot.fly();
+}
+
+function keyPressed(){
+    if(keyCode===32){
+        slingshot.attach(bird.body);
+        //slingshot.sling.bodyA=bird.body;
+    }
 }
